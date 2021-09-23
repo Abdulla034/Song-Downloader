@@ -12,8 +12,9 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 ABS="Developer"
 APPER="mehdizade_abdulla"
 OWNER="Owner"
+GITCLONE="github.com"
 B2="telegram.dog/mehdizade_abdulla"
-
+BUTTON1="📜 Deploy 📜"
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
@@ -22,11 +23,14 @@ def time_to_seconds(time):
 async def start(client, message):
     await message.reply_photo(photo=Config.START_IMG, caption=Config.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(
-            [
+             [
                 [
-                   InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
-                ], InlineKeyboardButton(ABS, url=B2)
+                    InlineKeyboardButton(BUTTON1, url=GITCLONE)
+                 ],[
+                    InlineKeyboardButton(OWNER, url=f"https://telegram.dog/{Config.OWNER}"),
+                    InlineKeyboardButton(ABS, url=B2)
             ]
+          ]
         ),
         reply_to_message_id=message.message_id
     )
