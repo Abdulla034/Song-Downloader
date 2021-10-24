@@ -34,7 +34,7 @@ def a(client, message):
     for i in message.command[1:]:
         query += ' ' + str(i)
     print(query)
-    m = message.reply('`Axtarılır ... Zəhmət olmasa Gözləyin ..`')
+    m = message.reply('`🔎 Mahnı axtarılır...`')
     ydl_opts = {"format": "bestaudio[ext=m4a]"}
     try:
         results = []
@@ -65,7 +65,7 @@ def a(client, message):
 
         except Exception as e:
             print(e)
-            m.edit('**👎 Mahnı tapılmadı.Yenidən cəhd edin !**')
+            m.edit('**❌ Mahnı tapılmadı.Yenidən cəhd edin !**')
             return
     except Exception as e:
         m.edit(
@@ -73,13 +73,13 @@ def a(client, message):
         )
         print(str(e))
         return
-    m.edit("`Mahnı ... Yüklənir ... Zəhmət olmasa Gözləyin ...`")
+    m.edit("`📥 Yüklənilir...`")
     try:
         with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Title:</b> <a href="{link}">{title}</a>\n⌚ <b>Duration:</b> <code>{duration}</code>\n📻 <b>Oyun Qrupu:</b> <a href="https://t.me/MafiaAzeribaycan">🇦🇿✵𝕄𝔸𝔽𝕀𝔸 𝔸ℤƏℝ𝔹𝔸𝕐ℂ𝔸ℕ✵🇦🇿</a>'
+        rep = f'🎶 <b>Başlıq:</b> <a href="{link}">{title}</a>\n⌚ <b>Müddət:</b> <code>{duration}</code>\n🎮 <b>Oyun Qrupu:</b> <a href="https://t.me/MafiaAzeribaycan">🇦🇿✵𝕄𝔸𝔽𝕀𝔸 𝔸ℤƏℝ𝔹𝔸𝕐ℂ𝔸ℕ✵🇦🇿</a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
