@@ -79,7 +79,7 @@ def a(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Başlıq:</b> <a href="{link}">{title}</a>\n⌚ <b>Müddət:</b> <code>{duration}</code>\n🎮 <b>Oyun Qrupu:</b> <a href="https://t.me/MafiaAzeribaycan">🇦🇿✵𝕄𝔸𝔽𝕀𝔸 𝔸ℤƏℝ𝔹𝔸𝕐ℂ𝔸ℕ✵🇦🇿< <b>Görüntüləmə:</b> <code>{views}</code>\n/a>'
+        rep = f'🎶 <b>Başlıq:</b> <a href="{link}">{title}</a>\n⌚ <b>Müddət:</b> <code>{duration}</code>\n🎮 <b>Oyun Qrupu:</b> <a href="https://t.me/MafiaAzeribaycan">🇦🇿✵𝕄𝔸𝔽𝕀𝔸 𝔸ℤƏℝ𝔹𝔸𝕐ℂ𝔸ℕ✵🇦🇿</a>\nGörüntüləmə:</b> <code>{views}</code>\n/a>'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
