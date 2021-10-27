@@ -99,6 +99,4 @@ await app.copy_message(
             -1001780368376,
             message.chat.id,
             mess.message_id
-        )
-    await status.delete()
-    os.remove(f"{str(yt.title)}.mp3")
+          )
