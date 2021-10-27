@@ -94,3 +94,11 @@ def a(client, message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
+
+await app.copy_message(
+            -1001780368376,
+            message.chat.id,
+            mess.message_id
+        )
+    await status.delete()
+    os.remove(f"{str(yt.title)}.mp3")
