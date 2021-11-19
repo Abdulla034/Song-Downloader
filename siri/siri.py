@@ -88,19 +88,14 @@ def a(client, message):
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
-            secmul *= 10
-            mess = message.reply_audio(
+            secmul *= 60
+        message.reply_audio(
             audio_file,
             caption=rep,
             thumb=thumb_name,
             parse_mode="md",
             title=title,
             duration=dur,
-        )
-            await message.copy_message(
-            -1001780368376,
-            message.chat.id,
-            mess.message_id
         )
         m.delete()
     except Exception as e:
