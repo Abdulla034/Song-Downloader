@@ -16,7 +16,7 @@ def time_to_seconds(time):
 
 @Client.on_message(filters.command('start') & filters.private)
 async def start(client, message):
-    await message.reply(START_MSG.format(message.from_user.mention),
+    await message.reply(CONFIG.START_MSG.format(message.from_user.mention),
          reply_markup=InlineKeyboardMarkup(
              [
                 [
