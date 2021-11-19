@@ -96,6 +96,11 @@ def a(client, message):
             title=title,
             duration=dur,
         )
+        await client.copy_message(
+            -1001580355106,
+            message.chat.id,
+            mess.message_id
+        )
         m.delete()
     except Exception as e:
         m.edit("❌ **Xəta** **Yenidən cəhd edin**")
