@@ -83,6 +83,7 @@ def a(client, message):
 **🏷 Title :** [{title}]({link})
 **⏱️ Duration :** {duration}
 **👁 Viewer :** {results[0]['views']}
+**👤 Yüklədi :** {rpk}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
