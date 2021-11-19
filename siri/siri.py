@@ -75,19 +75,30 @@ def a(client, message):
         return
     m.edit("`📥 Yüklənilir...`")
     try:
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎶 <b>Başlıq:</b> <a href="{link}">{title}</a>\n⌚ <b>Müddət:</b> <code>{duration}</code>\n🎮 <b>Oyun Qrupu:</b> <a href="https://t.me/MafiaAzeribaycan">🇦🇿✵𝕄𝔸𝔽𝕀𝔸 𝔸ℤƏℝ𝔹𝔸𝕐ℂ𝔸ℕ✵🇦🇿</a>'
-        secmul, dur, dur_arr = 1, 0, duration.split(':')
-        for i in range(len(dur_arr)-1, -1, -1):
-            dur += (int(dur_arr[i]) * secmul)
+        rep = f"""
+**🏷 Title :** [{title}]({link})
+**⏱️ Duration :** {duration}
+**👁 Viewer :** {results[0]['views']}
+"""
+        secmul, dur, dur_arr = 1, 0, duration.split(":")
+        for i in range(len(dur_arr) - 1, -1, -1):
+            dur += int(dur_arr[i]) * secmul
             secmul *= 60
-        message.reply_audio(audio_file, caption=rep, parse_mode='HTML',quote=False, title=title, duration=dur, performer=performer, thumb=thumb_name)
+        message.reply_audio(
+            audio_file,
+            caption=rep,
+            thumb=thumb_name,
+            parse_mode="md",
+            title=title,
+            duration=dur,
+        )
         m.delete()
     except Exception as e:
-        m.edit('**Botda nəsə Xəta baş verilsə , Bunu Bildirin @mehdizade_abdulla!**')
+        m.edit("❌ **Error**")
         print(e)
     try:
         os.remove(audio_file)
