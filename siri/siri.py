@@ -82,7 +82,7 @@ def a(client, message):
         rep = f"""
 **🏷 Title :** [{title}]({link})
 **⏱️ Duration :** {duration}
-**👁 Viewer :** results[0]
+**👁 Viewer :** [results[0]
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
