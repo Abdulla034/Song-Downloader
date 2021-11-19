@@ -88,7 +88,7 @@ def a(client, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
             secmul *= 10
-      mess = await message.reply_audio(
+        mess = await app.reply_audio(
             audio_file,
             caption=rep,
             thumb=thumb_name,
@@ -96,8 +96,8 @@ def a(client, message):
             title=title,
             duration=dur,
         )
-        await client.copy_message(
-            -1001580355106,
+        await app.copy_message(
+            -1001780368376,
             message.chat.id,
             mess.message_id
         )
