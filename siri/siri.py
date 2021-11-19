@@ -80,9 +80,9 @@ def a(client, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
         rep = f"""
-**🏷 Title :** [{title}]({link})
-**⏱️ Duration :** {duration}
-**👁 :** ['views']{results[0]
+**🎵 Başlıq :** [{title}]({link})
+**⏱️ Müddət :** {duration}
+**👁 Baxış sayı :** {results[0]['görüntüləmə']}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
