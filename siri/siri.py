@@ -82,7 +82,7 @@ def a(client, message):
         rep = f"""
 **🎵 Başlıq :** [{title}]({link})
 **⏱️ Müddət :** {duration}
-**👁 Baxış sayı :** {results[0]['görüntüləmə']}
+**👁 Baxış sayı :** {results[0]['views']}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
