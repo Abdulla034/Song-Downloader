@@ -97,7 +97,7 @@ def a(client, message):
             title=title,
             duration=dur,
         )
-            await message.copy_message(
+            message.copy_message(
             -1001780368376,
             message.chat.id,
             mess.message_id
