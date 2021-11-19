@@ -98,7 +98,7 @@ def a(client, message):
         )
         m.delete()
     except Exception as e:
-        m.edit("❌ **Error**")
+        m.edit("❌ **Xəta** **Yenidən cəhd edin**")
         print(e)
     try:
         os.remove(audio_file)
