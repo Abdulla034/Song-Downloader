@@ -5,7 +5,7 @@ import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 import heroku3
-from siri import OWNER_ID, tbot, UPSTREAM_REPO_URL
+from siri import OWNER, tbot, UPSTREAM_REPO_URL
 
 
 # UPSTREAM_REPO_URL = "https://github.com/Amarnathcdj/Julia.git"
