@@ -1,11 +1,11 @@
-from siri.events import register
+from main.py.events import register
 from os import remove, execle, path, environ
 import asyncio
 import sys
 from git import Repo
 from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 import heroku3
-from siri import OWNER, tbot, UPSTREAM_REPO_URL
+from main.py import OWNER, tbot, UPSTREAM_REPO_URL
 
 
 # UPSTREAM_REPO_URL = "https://github.com/Amarnathcdj/Julia.git"
