@@ -80,7 +80,7 @@ def a(client, message):
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
         rep = f"""
-**🎵 Başlıq :** {results[0]["title"]}
+**🎵 Başlıq :** {title}
 **⏱️ Müddət :** {results[0]["duration"]}
 **👁 Baxış sayı :** {results[0]['views']}
 """
