@@ -81,7 +81,7 @@ def a(client, message):
             ydl.process_info(info_dict)
         rep = f"""
 **🎵 Başlıq :** {title}
-**⏱️ Müddət :** {results[0]["duration"]}
+**⏱️ Müddət :** {duration}
 **👁 Baxış sayı :** {results[0]['views']}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
