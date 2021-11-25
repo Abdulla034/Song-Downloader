@@ -89,12 +89,14 @@ def a(client, message):
             dur += int(dur_arr[i]) * secmul
             secmul *= 60
         message.reply_audio(
-            audio_file,
-            caption=rep,
+            audio_file, 
+            caption=rep, 
+            parse_mode='HTML',
+            quote=False, 
+            title=title, 
+            duration=dur, 
+            performer=performer, 
             thumb=thumb_name,
-            parse_mode="md",
-            title=title,
-            duration=dur,
         )
         m.delete()
     except Exception as e:
