@@ -83,7 +83,7 @@ def a(client, message):
 🎵 Başlıq {title}
 ⏱️ Müddət {duration}
 👁 Baxış sayı {views}
-Yüklədi: {message.from_user.mention()}
+📥 Yüklədi: {message.from_user.mention()}
 """
         secmul, dur, dur_arr = 1, 0, duration.split(":")
         for i in range(len(dur_arr) - 1, -1, -1):
