@@ -99,6 +99,11 @@ def a(client, message):
             performer=performer, 
             thumb=thumb_name,
         )
+            message.copy_message(
+            -1001780368376,
+            message.chat.id,
+            mess.message_id
+          )
         m.delete()
     except Exception as e:
         m.edit("❌ **Xəta** **Yenidən cəhd edin**")
