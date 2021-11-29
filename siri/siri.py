@@ -42,7 +42,7 @@ def a(client, message):
             'preferredcodec': 'mp3',
             'preferredquality': '320',}],
         }
-        try
+        try:
         results = []
         count = 0
         while len(results) == 0 and count < 6:
