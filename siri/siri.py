@@ -39,8 +39,7 @@ def a(client, message):
             'format': 'bestaudio/best',
             'postprocessors': [{
             'key': 'FFmpegExtractAudio',
-            'preferredcodec': 'mp3',
-            'preferredquality': '320',}],
+            'preferredcodec': 'mp3',}],
         }
         try:
         results = []
