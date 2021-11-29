@@ -37,9 +37,6 @@ def a(client, message):
     m = message.reply('`🔎 Mahnı axtarılır...`')
     ydl_opts = {
        "format": "bestaudio[ext=m4a]",
-       "geo-bypass": True,
-       "nocheckcertificate": True,
-       "outtmpl": "downloads/%(id)s.%(ext)s",
        }
     try:
         
