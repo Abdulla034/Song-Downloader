@@ -35,7 +35,7 @@ def a(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('`🔎 Mahnı axtarılır...`')
-    ydl_opts = {"format": "audio[mp3]"}
+    ydl_opts = {"format": "bestaudio/best"}
     try:
         results = []
         count = 0
