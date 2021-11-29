@@ -41,7 +41,7 @@ def a(client, message):
             'key': 'FFmpegExtractAudio',
             'preferredcodec': 'mp3',}],
         }
-        try:
+    try:
         
         results = []
         count = 0
