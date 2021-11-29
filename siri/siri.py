@@ -35,8 +35,14 @@ def a(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('`🔎 Mahnı axtarılır...`')
-    ydl_opts = {"format": "bestaudio/best"}
-    try:
+    ydl_opts = {
+            'format': 'bestaudio/best',
+            'postprocessors': [{
+            'key': 'FFmpegExtractAudio',
+            'preferredcodec': 'mp3',
+            'preferredquality': '320',}],
+        }
+        try
         results = []
         count = 0
         while len(results) == 0 and count < 6:
