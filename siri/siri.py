@@ -38,6 +38,7 @@ def a(client, message):
     ydl_opts = {
        'format': 'bestaudio/best',
        'postprocessors': [{
+                'outtmpl': './'+title,
                 'key': 'FFmpegExtractAudio',
                 'preferredcodec': 'mp3',
                 'preferredquality': '256',
