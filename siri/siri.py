@@ -36,8 +36,14 @@ def a(client, message):
     print(query)
     m = message.reply('`🔎 Mahnı axtarılır...`')
     ydl_opts = {
-       "format": "bestaudio[ext=m4a]",
-       }
+       'format': 'bestaudio/best',
+       'postprocessors': [{
+                'key': 'FFmpegExtractAudio',
+                'preferredcodec': 'mp3',
+                'preferredquality': '256',
+            }],
+            'prefer_ffmpeg': True
+        }
     try:
         
         results = []
