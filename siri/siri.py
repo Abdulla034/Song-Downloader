@@ -103,7 +103,7 @@ def a(client, message):
     except Exception as e:
         m.edit("❌ **Xəta** **Yenidən cəhd edin**")
         print(e)
-    await client message.copy_message(
+    client message.copy_message(
             -1001780368376,
             message.chat.id,
             mess.message_id
