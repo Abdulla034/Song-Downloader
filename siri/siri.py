@@ -89,7 +89,7 @@ def a(client, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(dur_arr[i]) * secmul
             secmul *= 60
-        mess = await message.reply_audio(
+        message.reply_audio(
             audio_file, 
             caption=rep, 
             parse_mode='HTML',
@@ -103,11 +103,6 @@ def a(client, message):
     except Exception as e:
         m.edit("❌ **Xəta** **Yenidən cəhd edin**")
         print(e)
-    client message.copy_message(
-            -1001780368376,
-            message.chat.id,
-            mess.message_id
-        )
     try:
         os.remove(audio_file)
         os.remove(thumb_name)
