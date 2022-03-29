@@ -2,10 +2,6 @@ import os
 import re
 from youtube_dl import YoutubeDL
 
-import datetime
-import motor.motor_asyncio
-from motor.motor_asyncio import AsyncIOMotorClient as MongoClient
-
 class Config:
     APP_ID = int(os.environ.get("APP_ID", ""))
     API_HASH = os.environ.get("API_HASH", "")
