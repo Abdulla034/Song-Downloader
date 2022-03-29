@@ -8,6 +8,7 @@ import os
 import time
 from config import Config
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.handlers import MessageHandler
 
 OWNER="Owner"
 def time_to_seconds(time):
