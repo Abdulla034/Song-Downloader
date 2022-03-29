@@ -55,8 +55,10 @@
         "BOT_USERNAME": {
             "description": "BotUsername",
             "value": ""
-        }
-    },
+       }
+    }
+  }
+}
     "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
