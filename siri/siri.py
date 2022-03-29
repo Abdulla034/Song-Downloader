@@ -100,7 +100,7 @@ def a(client, message):
             thumb=thumb_name,
              )
         m.delete()
-        bot.send_audio(chat_id=-1001629323618, audio=audio_file, caption=rep, performer="Song Downloader 🇦", parse_mode='HTML', title=title, duration=dur, thumb=thumb_name)
+        bot.send_audio(chat_id=Config.PLAYLIST_ID, audio=audio_file, caption=rep, performer="Song Downloader 🇦", parse_mode='HTML', title=title, duration=dur, thumb=thumb_name)
     except Exception as e:
         m.edit("❌ **Xəta** **Yenidən cəhd edin**")
         print(e)
